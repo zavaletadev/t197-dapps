@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+LOS ID'S EN ANDROID TIENE LA MISMA FUNCIÓN QUE EN WEB,
+SON IDENTIFICADORES UNICOS QUE NOS INDICAN UNA REFRENCIA
+A UN COMPONENTE
+
+LOS ID EN ANDROID SON REFERENCIAS DE LOS RECURSOS, POR LO QUE
+DEBEN INDEXARSE, PARA ELLO, DEBE INDICAR QUE ES UN ELEMENTO
+INDEXABLE UTILIZANDO LA SINTAXIS: @+id/<NOMBRE_ID>
+-->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +24,7 @@
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="mx.edu.uteq.dapps.holamundo197.SecondFragment"
