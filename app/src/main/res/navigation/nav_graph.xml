@@ -34,5 +34,31 @@ INDEXABLE UTILIZANDO LA SINTAXIS: @+id/<NOMBRE_ID>
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+
+        <!-- Agregamos una acción a linearFragment desde
+        esta pantalla -->
+        <action
+            android:id="@+id/action_SF_to_Lf"
+            app:destination="@id/LinearFragment" />
+    </fragment>
+
+    <!--
+    Agregamos nuestro Fragment a la navegación
+    -->
+    <fragment
+        android:id="@+id/LinearFragment"
+        android:name="mx.edu.uteq.dapps.holamundo197.LinearFragment"
+        android:label="Linear Layout"
+        tools:layout="@layout/fragment_linear">
+        <!--
+        Acción para retornar de Linear a Second Fragment
+        -->
+        <action
+            android:id="@+id/action_LF_to_SF"
+            app:destination="@id/SecondFragment" />
+        <!--
+        Acción para retornar de Linear al Home
+        -->
+
     </fragment>
 </navigation>

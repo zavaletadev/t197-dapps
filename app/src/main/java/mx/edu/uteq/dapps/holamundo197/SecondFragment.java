@@ -35,6 +35,24 @@ private FragmentSecondBinding binding;
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+
+        /*
+        Click al boton Linear  para ir a linearFragment
+         */
+        binding.buttonLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*
+                Nos movemos a LinearFragment
+                Param 1 ==== instancia de la clase
+                Param 2 ==== Id del elemento a donde quiero ir
+                 */
+                NavHostFragment.findNavController(SecondFragment.this)
+                .navigate(R.id.action_SF_to_Lf);
+            }
+        });
+
+
     }
 
 @Override

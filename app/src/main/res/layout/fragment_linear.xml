@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearFragment"
+    android:orientation="vertical">
+
+    <!--
+    En android existen 3 unidades de medida y 2 wildcard dinámicos
+    PX ===== Punto en la pantalla, en función de la resolución
+
+    DP ===== Densidad independiente
+             (en función de la densidad de pixeles) Aplica para
+             componente
+
+    SP ==== Escala independiente es muy similiar a DP pero aplicado
+            especificamente para texto
+
+    match_parent ===== Toma el ancho del 100% del contenedor
+    wrap_content ===== El ancho se ajusta al contenido
+
+    Separación dentro del elemento
+    Padding
+
+    Separación fuera del elemento
+    Margin
+    -->
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
