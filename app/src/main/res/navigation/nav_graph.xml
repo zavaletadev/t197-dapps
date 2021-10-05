@@ -40,6 +40,13 @@ INDEXABLE UTILIZANDO LA SINTAXIS: @+id/<NOMBRE_ID>
         <action
             android:id="@+id/action_SF_to_Lf"
             app:destination="@id/LinearFragment" />
+
+        <!-- Agregamod una acción a
+        ScrollFragment desde esta pantalla -->
+        <action
+            android:id="@+id/action_SF_to_ScF"
+            app:destination="@id/ScrollFragment" />
+
     </fragment>
 
     <!--
@@ -59,6 +66,11 @@ INDEXABLE UTILIZANDO LA SINTAXIS: @+id/<NOMBRE_ID>
         <!--
         Acción para retornar de Linear al Home
         -->
-
     </fragment>
+
+    <fragment
+        android:id="@+id/ScrollFragment"
+        android:name="mx.edu.uteq.dapps.holamundo197.ScrollFragment"
+        android:label="Scroll Layout"
+        tools:layout="@layout/fragment_scroll" />
 </navigation>

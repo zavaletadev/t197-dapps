@@ -46,13 +46,25 @@
         android:padding="10dp"
         android:layout_margin="10dp"/>
 
+    <!-- Para implementar diseño fluido en Android
+    debemos adicionar un peso total al componente
+    contenedor y entre todos los hijos deberán
+    completar la suma del peso final
+
+    El contenedor debe indicar el peso total
+    de los elementos hijo
+
+    Cada hijo dene indicar su propio peso-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="12">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="1dp"
+            android:layout_weight="4"
             android:layout_height="wrap_content"
             android:text="TextView 1"
             android:textSize="30sp"
@@ -61,7 +73,8 @@
             android:layout_margin="10dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="1dp"
+            android:layout_weight="4"
             android:layout_height="wrap_content"
             android:text="TextView 2"
             android:textSize="30sp"
@@ -69,6 +82,295 @@
             android:padding="10dp"
             android:layout_margin="10dp"/>
 
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
     </LinearLayout>
+
+    <!-- Copiado y pegado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <!-- Termina Copiado y pegado -->
+
+    <!-- Copiado y pegado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <!-- Termina Copiado y pegado -->
+
+    <!-- Copiado y pegado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <!-- Termina Copiado y pegado -->
+
+    <!-- Copiado y pegado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <!-- Termina Copiado y pegado -->
+
+    <!-- Copiado y pegado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 1"
+        android:textSize="30sp"
+        android:background="#A5D6A7"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto 2"
+        android:textSize="30sp"
+        android:background="#B39DDB"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 1"
+            android:textSize="30sp"
+            android:background="#A5D6A7"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="TextView 2"
+            android:textSize="30sp"
+            android:background="#B39DDB"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <!-- Termina Copiado y pegado -->
 
 </LinearLayout>

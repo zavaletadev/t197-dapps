@@ -52,6 +52,17 @@ private FragmentSecondBinding binding;
             }
         });
 
+        /*
+        Click al boton Scroll para ir a ScrollFragment
+         */
+        binding.buttonScroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(SecondFragment.this)
+                .navigate(R.id.action_SF_to_ScF);
+            }
+        });
+
 
     }
 
