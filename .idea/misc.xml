@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_curp.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.3625" />
@@ -11,7 +12,7 @@
         <entry key="app/src/main/res/layout/fragment_practica1linear.xml" value="0.346875" />
         <entry key="app/src/main/res/layout/fragment_scroll.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3625" />
-        <entry key="app/src/main/res/menu/menu_main.xml" value="0.3625" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.5" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37538304392236976" />
       </map>
     </option>

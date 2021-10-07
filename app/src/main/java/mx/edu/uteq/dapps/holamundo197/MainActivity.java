@@ -1,5 +1,6 @@
 package mx.edu.uteq.dapps.holamundo197;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +47,10 @@ private ActivityMainBinding binding;
         return true;
     }
 
+    /*
+    Metodo que permite darle acción
+    a cada click de cada elemento dle menu superior
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -56,6 +61,18 @@ private ActivityMainBinding binding;
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        /*
+        Si el usuario selecciona action_curp lo mandamos
+        a dicho Activity
+         */
+        if (id == R.id.action_curp) {
+            Intent intentCurp = new Intent(
+                    MainActivity.this,
+                    CurpActivity.class
+            );
+            startActivity(intentCurp);
         }
 
         return super.onOptionsItemSelected(item);

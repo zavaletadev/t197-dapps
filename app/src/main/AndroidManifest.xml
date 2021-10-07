@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mx.edu.uteq.dapps.holamundo197" >
+    package="mx.edu.uteq.dapps.holamundo197">
+
+    <!--
+    EL ARCHIVO MANIFEST ES EL INSTRUCTIVO QUE LE DICE
+    A TU APP, CUALES SON LOS ELEMENTOS QUE CONTIENE COMO:
+    PERMISOS, PANTALLAS, IDIOMA, ICONO, COLORES, TEMA, ETC...
+    -->
 
     <application
         android:allowBackup="true"
@@ -8,18 +14,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HolaMundo197" >
+        android:theme="@style/Theme.HolaMundo197">
+
+        <!-- cada etiqueta activty hace referencia
+        a un screen / pantalla de tu app, si aparece aqui, la
+        pantalla no será accesible -->
+        <activity
+            android:name=".CurpActivity"
+            android:theme="@style/Theme.HolaMundo197.NoActionBar"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.HolaMundo197.NoActionBar" >
+            android:theme="@style/Theme.HolaMundo197.NoActionBar">
+            <!-- intent filter indica cual screen es el lanzador
+            de la aplicación (la pantalla con la que inicia la app
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

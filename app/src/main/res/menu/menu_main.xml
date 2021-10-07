@@ -2,8 +2,77 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="mx.edu.uteq.dapps.holamundo197.MainActivity" >
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <!--
+    orderInCategory:
+    Define la posición del
+    elemento mientreas mas se acerca a 0, tiene
+    mayor prioridad
+
+    showAsAction:
+    Define si el elemento de menu aparece dentro
+    del contenedor o directamente en AppBar
+    como componente
+    -->
+
+    <item android:id="@+id/action_curp"
+        android:title="Generar curp"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_verified_user"/>
+
+    <!--
+    los menus son elementos anidados
+    que pueden agregarse infinitamente en la
+    siguiente estructura
+    Menu->item->menu->item->menu
+
+    OJO: es solo un ejemplo, los elementos
+    no tienen ID, si deseas hacerlos funcionales
+    agrega un id
+    -->
+    <item
+        android:title="Submenu"
+        android:orderInCategory="210"
+        app:showAsAction="never">
+
+        <menu>
+            <item android:title="Elemento 1"
+                android:orderInCategory="100"
+                app:showAsAction="never"/>
+
+            <item android:title="Elemento 2"
+                android:orderInCategory="100"
+                app:showAsAction="never">
+                <menu>
+                    <item android:title="Otro elem"
+                        android:orderInCategory="100"
+                        app:showAsAction="never" />
+
+                    <item android:title="Otro elem"
+                        android:orderInCategory="100"
+                        app:showAsAction="never" />
+
+                    <item android:title="Otro elem"
+                        android:orderInCategory="100"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+            <item android:title="Elemento 3"
+                android:orderInCategory="100"
+                app:showAsAction="never"/>
+        </menu>
+
+    </item>
+
+
+
+
+
 </menu>
