@@ -11,4 +11,23 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--
+    Puedes generar un arreglo de cadenas de texto para utilizarse
+    en un Spinner que tiene los datos fijos
+    -->
+    <string-array name="sexo">
+        <item>Selecciona tu género de nacimiento</item>
+        <item>Mujer</item>
+        <item>Hombre</item>
+    </string-array>
+
+    <string-array name="len">
+        <item>PHP</item>
+        <item>Java</item>
+        <item>Ruby</item>
+        <item>C#</item>
+        <item>Python</item>
+        <item>JavaScript</item>
+    </string-array>
 </resources>
