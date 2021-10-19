@@ -71,11 +71,139 @@
                 android:layout_margin="10dp" />
         </LinearLayout>
 
+        <!--
+        Componentes de selección
+        RadioButton
+            Destinado a seleccionar un elemento
+            de un grupo SOLO UNO
+        Spinner
+            Destinado a seleccionar un elemento
+            de un listado SOLO UNO
+        CheckBox
+            Destinado a selecciona N elementos
+            y no pertenece a un grupo necesariamente
+        Switch
+            Destinado a aplicar un estado
+            Prendido / Apgado
+        -->
+
+        <!-- RadioGroup indica que todos los Radios
+        contenidos son del mimos grupo y por ende SOLO UNO
+        se puede seleccionar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo de nacimiento"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_mujer"
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Mujer"
+                android:drawableStart="@drawable/ic_woman"/>
+
+            <RadioButton
+                android:id="@+id/rb_hombre"
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Hombre"
+                android:drawableStart="@drawable/ic_man"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha de nacimiento"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="12"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Día" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Mes" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Año" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp">
+
+            <Spinner
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:entries="@array/dias_calendario"/>
+
+            <Spinner
+                android:id="@+id/sp_mes_nacimiento"
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:entries="@array/meses_calendario"/>
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="4 dígitos"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado de nacimiento"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:entries="@array/sexo"/>
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/estados_mx"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -100,6 +228,22 @@
             android:drawableStart="@drawable/ic_account_box"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check 1" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check 2" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acepto los términos"
+            android:layout_margin="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,6 +271,8 @@
                 android:layout_margin="5dp" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 

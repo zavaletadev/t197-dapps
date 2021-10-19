@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,11 @@ public class CurpActivity extends AppCompatActivity {
     private EditText etApellido2;
     private TextView tvTitulo;
     private Button btnCurp;
+
+    private Spinner spMesNacimiento;
+
+    private RadioButton rbMujer;
+    private RadioButton rbHombre;
 
     /*
     AlertDialog es un componente
@@ -79,6 +86,11 @@ public class CurpActivity extends AppCompatActivity {
         etNombre = findViewById(R.id.et_nombres);
         tvTitulo = findViewById(R.id.tv_titulo);
         btnCurp  = findViewById(R.id.btn_curp);
+
+        spMesNacimiento = findViewById(R.id.sp_mes_nacimiento);
+        rbMujer = findViewById(R.id.rb_mujer);
+        rbHombre = findViewById(R.id.rb_hombre);
+
     }
 
     /*
@@ -89,11 +101,37 @@ public class CurpActivity extends AppCompatActivity {
     el atributo onclick en el layout (vista)
      */
     public void generaCURP (View v) {
-        Toast.makeText(
+
+        /*
+        Tomamos el valor del mes seleccionado desde el Spinner
+         */
+        final String mesNacimiento = spMesNacimiento.getSelectedItem().toString();
+
+        //Mostramos el mes seleccionado
+        /*Toast.makeText(
                 CurpActivity.this,
-                "Hola desde mi propio evento",
+                mesNacimiento,
                 Toast.LENGTH_SHORT
-        ).show();
+        ).show();*/
+
+        /*
+        Validamos si el radio Mujer está seelccionado
+         */
+        if (rbMujer.isChecked()) {
+            Toast.makeText(
+                    CurpActivity.this,
+                    "Mujer seleccionado",
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
+
+        if (rbHombre.isChecked()) {
+            Toast.makeText(
+                    CurpActivity.this,
+                    "Hombre seleccionado",
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
 
         /*
         guardamos el texto del campo nombres
