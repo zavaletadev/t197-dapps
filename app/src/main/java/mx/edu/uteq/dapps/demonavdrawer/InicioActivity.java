@@ -4,9 +4,11 @@ import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -42,10 +44,46 @@ public class InicioActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    Método que inicializa el menú (lo nmuestra)
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.pub_main, menu);
         return true;
+    }
+
+
+    /*
+    Método que evalua el clic de los elementos
+    del menu
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //tomamos el id del elemento seleccionado
+        int id = item.getItemId();
+
+        NavController navController = Navigation.findNavController(
+                InicioActivity.this,
+                R.id.nav_host_fragment_content_inicio
+        );
+
+        if (id == R.id.menu_carrito) {
+            navController.navigateUp();
+            //Indicamos el id del componente en el archivo de
+            //navegación (nav_graph)
+            navController.navigate(R.id.CarritoFragment);
+        }
+
+        if (id == R.id.menu_login) {
+
+            navController.navigateUp();
+            //Indicamos el id del componente en el archivo de
+            //navegación (nav_graph)
+            navController.navigate(R.id.LoginFragment);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

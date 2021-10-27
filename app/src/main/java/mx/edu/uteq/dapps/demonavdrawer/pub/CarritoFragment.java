@@ -1,4 +1,4 @@
-package mx.edu.uteq.dapps.demonavdrawer;
+package mx.edu.uteq.dapps.demonavdrawer.pub;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import mx.edu.uteq.dapps.demonavdrawer.R;
 import mx.edu.uteq.dapps.demonavdrawer.databinding.FragmentCarritoBinding;
 
 public class CarritoFragment extends Fragment {
@@ -29,7 +30,7 @@ public class CarritoFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(CarritoFragment.this).navigate(R.id.action_SecondFragment_to_FirstFragment);
+                NavHostFragment.findNavController(CarritoFragment.this).navigate(R.id.action_CarritoFragment_to_CatalogoFragment);
             }
         });
     }

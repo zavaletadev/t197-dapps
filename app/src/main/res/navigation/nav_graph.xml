@@ -3,26 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/CatalogoFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="mx.edu.uteq.dapps.demonavdrawer.CatalogoFragment"
-        android:label="@string/first_fragment_label"
+        android:id="@+id/CatalogoFragment"
+        android:name="mx.edu.uteq.dapps.demonavdrawer.pub.CatalogoFragment"
+        android:label="Catálogo"
         tools:layout="@layout/fragment_catalogo">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_CatalogoFragment_to_CarritoFragment"
+            app:destination="@id/CarritoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="mx.edu.uteq.dapps.demonavdrawer.CarritoFragment"
-        android:label="@string/second_fragment_label"
+        android:id="@+id/CarritoFragment"
+        android:name="mx.edu.uteq.dapps.demonavdrawer.pub.CarritoFragment"
+        android:label="Carrito"
         tools:layout="@layout/fragment_carrito">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_CarritoFragment_to_CatalogoFragment"
+            app:destination="@id/CatalogoFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="mx.edu.uteq.dapps.demonavdrawer.pub.LoginFragment"
+        android:label="Inicio de sesión"
+        tools:layout="@layout/fragment_login" />
 </navigation>

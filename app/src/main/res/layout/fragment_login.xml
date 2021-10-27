@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pub.LoginFragment">
+
+    <!--
+    correo electrónico
+    contraseña
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/login"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+        <!--
+        TextInputLayout permite adicionar etiquetas
+        flotantes
+        -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_email"
+            android:hint="Correo electrónico"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
+
+            <!--
+            TextInputEditText permite agregar animaciones
+            y elementos adicionales a un editText
+            -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_email"
+            android:hint="Otro correo electrónico"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <!--
+            TextInputEditText permite agregar animaciones
+            y elementos adicionales a un editText
+            -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_password"
+            app:passwordToggleDrawable="@drawable/ic_lock_open"
+            app:passwordToggleEnabled="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Contraseña"
+            app:counterEnabled="true"
+            app:counterMaxLength="12">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="12"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Registrarse"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="¿No tienes cuenta? registrate"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="Otro botón"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="Otro botón"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
