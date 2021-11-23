@@ -33,6 +33,14 @@ public class CatalogoFragment extends Fragment {
                 NavHostFragment.findNavController(CatalogoFragment.this).navigate(R.id.action_CatalogoFragment_to_CarritoFragment);
             }
         });
+
+        binding.btnWs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(CatalogoFragment.this)
+                        .navigate(R.id.action_FF_to_WSF);
+            }
+        });
     }
 
     @Override

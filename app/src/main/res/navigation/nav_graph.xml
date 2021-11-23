@@ -14,6 +14,11 @@
         <action
             android:id="@+id/action_CatalogoFragment_to_CarritoFragment"
             app:destination="@id/CarritoFragment" />
+
+        <action
+            android:id="@+id/action_FF_to_WSF"
+            app:destination="@+id/EjemploWwebserviceFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/CarritoFragment"
@@ -31,4 +36,11 @@
         android:name="mx.edu.uteq.dapps.demonavdrawer.pub.LoginFragment"
         android:label="Inicio de sesión"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/EjemploWwebserviceFragment"
+        android:name="mx.edu.uteq.dapps.demonavdrawer.pub.EjemplowebserviceFragment"
+        android:label="Ejemplo Web Service"
+        tools:layout="@layout/fragment_ejemplowebservice" />
+
 </navigation>

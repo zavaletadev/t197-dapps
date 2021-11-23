@@ -2,13 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.edu.uteq.dapps.demonavdrawer">
 
+    <!-- Los permisos de una app se aplican antes de la etiqueta
+    <application>
+    Cuando tu app va a utilizar hardware del dispositivo (cámara, micrófono, galería,
+    acelerómetro, giroscopio, etc...)
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DemoNavDrawer">
+        android:theme="@style/Theme.DemoNavDrawer"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".InicioActivity"
             android:exported="true"
