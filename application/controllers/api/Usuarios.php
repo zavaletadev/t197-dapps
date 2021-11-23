@@ -38,8 +38,29 @@ class Usuarios extends CI_Controller {
         echo "</pre>";
     }
 
+    /**
+     * [mostrar_json description]
+     * @example [GET] https://zavaletazea.dev/labs/awos-dapps197/api/usuarios/mostrar_json
+     * @return [type] [description]
+     */
     function mostrar_json()
     {
+        /*
+        Simular un servicio lento
+         */
+        sleep(1);
+        /**
+         * 1.- AGREGAR LA LIBRERÍA VOLLEY A NUESTRO PROYECTO DE ANDROID DESDE EL APP.GRADLE
+         * 2.- HABILITAR EL PERMISO DE INTERNET DESDE EL MANIFEST.XML DE NUESTRA APP
+         * 3.- HABILITAR LA CONEXIÓN VÍA HTTP DESDE EL ARCHIVO MANIFEST.XML DE NUESTRA APP
+         */
+
+        /*
+        Indicamos por medio de un encabezado que 
+        el contenido que retornamos es JSON
+         */
+        header('Content-Type: application/json; charset=utf-8');
+
         //En PHP los objetos JSON se transforman 
         //a partir de arregos asociativos
         $arr_php = array(
@@ -54,7 +75,7 @@ class Usuarios extends CI_Controller {
             'calificaciones' => array(
                 array(
                     "materias" => "DAPPS", 
-                    "calif"    => 'SA'
+                    "calif"    => 'AU'
                 ),
                 array(
                     "materias" => "INGLES", 
@@ -66,10 +87,8 @@ class Usuarios extends CI_Controller {
         
         //Convertimos el arreglo de PHP a JSON
         $obj_json = json_encode($arr_php);
-
-        echo "<pre>";
-        echo $obj_json;
-        echo "</pre>";      
+        
+        echo $obj_json;        
     }
 
 }
