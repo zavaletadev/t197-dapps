@@ -34,7 +34,7 @@ class Auth extends CI_Controller {
 
     /**
      * Inicio de sesión mediante usuario/telefono y contraseña 
-     * @example [POST(usuario, password)] https://zavaletazea.dev/labs/awos-dapps197/api/auth
+     * @example [POST(usuario, password)] https://zavaletazea.dev/labs/awos-dapps197/api/auth/login
      * @return [type] [description]
      */
     function login()
