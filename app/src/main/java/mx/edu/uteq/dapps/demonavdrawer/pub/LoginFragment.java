@@ -2,8 +2,10 @@ package mx.edu.uteq.dapps.demonavdrawer.pub;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -53,6 +55,20 @@ public class LoginFragment extends Fragment {
     private ProgressDialog progress;
     private AlertDialog.Builder alerta;
 
+    /*
+    SharedPreferences me permite guardar información de mi app
+    localmente en el dispositivo, directamente en una carpeta de sistema
+
+    Para guardar datos en SharedPreferences necesitamos:
+    1.- Acceder a SharedPreferences
+    2.- Crear / utilizar nuestro espacio de trabajo
+    3.- Crear un editor de nuestro espacio de trabajo
+    4.- Escribir los cambios en el espacio
+    5.- Guardar los cambios
+     */
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor spEditor;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentLoginBinding.inflate(inflater, container, false);
@@ -64,6 +80,24 @@ public class LoginFragment extends Fragment {
         progress.setMessage("Por favor espera...");
         progress.setCancelable(false);
         progress.setIndeterminate(true);
+
+        /*
+        Inicializamos SharedPreferences
+        1.- Nombre de nuestro espacio de trabajo
+        2.- Indicar el modo de uso de mi espacio de SharedPreferences
+            MODE_PRIVATE ---------> solo mi app puede usarlo
+            MODE_WORLD_READABLE --> solo mi app escribe, cualquier app lee
+            MODE_WORLD_WRITABLE --> cualquier app puede leer y escribir
+         */
+        sharedPreferences = getActivity().getSharedPreferences(
+                "t197",
+                Context.MODE_PRIVATE
+        );
+
+        /*
+        Inicializamos el editor del espacio de trabajo
+         */
+        spEditor = sharedPreferences.edit();
 
         /*
         Click en el boton iniciar sesión
@@ -98,6 +132,20 @@ public class LoginFragment extends Fragment {
                                     if (objRespuesta.getInt("code") == 200) {
 
                                         JSONObject datosUsuario = objRespuesta.getJSONObject("datos_usuario");
+
+                                        /*
+                                        Guardamos en nuestro espacio de SharedPreferences el id
+                                        encriptado del usuario y su contraseña
+                                         */
+                                        String md5UsuarioId = md5(datosUsuario.getString("usuario_id"));
+                                        String md5PassAuth = md5(binding.tietPassword.getText().toString());
+                                        spEditor.putString("id", md5UsuarioId);
+                                        spEditor.putString("user_key", md5PassAuth);
+
+                                        /*
+                                        Guardamos los cambios
+                                         */
+                                        spEditor.commit();
 
                                         /*
                                         Direccionamos al inicio de la App

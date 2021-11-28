@@ -21,7 +21,7 @@
         <activity
             android:name=".InicioActivity"
             android:exported="true"
-            android:label="@string/title_activity_inicio"
+            android:label="T197 Proyecto Final"
             android:theme="@style/Theme.DemoNavDrawer.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
